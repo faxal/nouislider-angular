@@ -49,7 +49,7 @@ angular.module('ya.nouislider', []).value('noUiSliderConfig', {}).directive('noU
         } else {
           var valueIsArray = angular.isArray(value)
           if (valueIsArray) value = value[0]
-          value = parseFloat(value) || 0
+          value = parseInt(value) || 0
           value = Math.min(Math.max(value, scope.noUiSlider.range.min), scope.noUiSlider.range.max)
           newValue = valueIsArray ? [value] : value
           ngModel.$setViewValue(newValue)
