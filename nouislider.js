@@ -1,4 +1,4 @@
-angular.module('ya.nouislider', []).value('noUiSliderConfig', {}).directive('noUiSlider', function(noUiSliderConfig) {
+angular.module('ya.nouislider', []).value('noUiSliderConfig', {}).directive('noUiSlider', ['noUiSliderConfig', function(noUiSliderConfig) {
   noUiSliderConfig = noUiSliderConfig || {}
   function handlesCount(value) {
     if (angular.isUndefined(value)) return 0
@@ -78,4 +78,4 @@ angular.module('ya.nouislider', []).value('noUiSliderConfig', {}).directive('noU
       }, true)
     }
   }
-})
+}]);
